@@ -19,8 +19,7 @@ const About = () => {
                 />
               </div>
               
-              {/* Decorative element */}
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-gold rounded-lg hidden md:block"></div>
+              {/* Removido o div decorativo que estava causando o problema do quadrado */}
             </div>
           </div>
 

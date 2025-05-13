@@ -11,7 +11,7 @@ const Collections = () => {
       id: 1,
       title: "Coleção Celestial",
       description: "Peças inspiradas em corpos celestes, com designs elegantes e delicados.",
-      image: "https://images.unsplash.com/photo-1633810541242-bb67bcc54fba?q=80&w=2070&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1633810541242-bb67bcc54fba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
     },
     {
       id: 2,
