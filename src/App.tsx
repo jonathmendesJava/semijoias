@@ -1,28 +1,46 @@
 
+import React from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import About from '@/components/About';
+import Collections from '@/components/Collections';
+import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
 
-const queryClient = new QueryClient();
+const App = () => {
+  // Scroll to the top when the app loads
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
+  return (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <div className="min-h-screen bg-black text-white">
+        {/* Navigation Bar */}
+        <Navbar />
+        
+        {/* Hero Section */}
+        <Hero />
+        
+        {/* About Section */}
+        <About />
+        
+        {/* Collections Section with Carousel */}
+        <Collections />
+        
+        {/* Contact Section with Google Maps */}
+        <Contact />
+        
+        {/* Footer */}
+        <Footer />
+      </div>
     </TooltipProvider>
-  </QueryClientProvider>
-);
+  );
+};
 
 export default App;
